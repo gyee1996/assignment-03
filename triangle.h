@@ -3,21 +3,37 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-
-int triangle(int n, int startingPoint)
+//triangle size function//
+int triangle(int n)
 {
-if (n == startingPoint)
-return 0;
+if (n == 1)
+return 1;
 else
-return (n+startingPoint)+triangle(n-1, startingPoint+1);
+return (n)+triangle(n-1);
 }
-
+//triangle display// 
+void display(int x)
+{
+if (x<=1)
+cout<< "*" << endl;
+else
+{
+  display(x-2);
+  while(x>1)
+{
+  cout<< "*";
+  x--;
+}
+cout << endl;
+}
+}
+//main// 
 int main()
 {
-int a,b=1;
+int a;
 cout << "Preferred Triangle size?";
 cin >> a;
-cout << triangle(a, b) << endl;
+cout << triangle(a);
 system ("pause");
 return 0;
 }

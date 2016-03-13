@@ -19,7 +19,7 @@ cout<< "*" << endl;
 else
 {
   display(x-2);
-  while(x>1)
+  while(x>=1)
 {
   cout<< "*";
   x--;
@@ -33,7 +33,7 @@ int main()
 int a;
 cout << "Preferred Triangle size?";
 cin >> a;
-cout << triangle(a);
+display (triangle(a));
 system ("pause");
 return 0;
 }
